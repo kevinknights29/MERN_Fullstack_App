@@ -38,5 +38,13 @@
   "devDependencies": {
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
